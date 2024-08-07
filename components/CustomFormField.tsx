@@ -6,10 +6,10 @@ import { Control } from "react-hook-form";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 
-/*import ReactDatePicker from "react-datepicker";
+//import ReactDatePicker from "react-datepicker";
 
 
-import { Checkbox } from "./ui/checkbox";*/
+
 import {
   FormControl,
   FormField,
@@ -18,8 +18,9 @@ import {
   FormMessage,
 } from "./ui/form";
 import { Input } from "./ui/input";
-/*import { Select, SelectContent, SelectTrigger, SelectValue } from "./ui/select";
-import { Textarea } from "./ui/textarea";*/
+import { Select, SelectContent, SelectTrigger, SelectValue } from "./ui/select";
+import { Textarea } from "./ui/textarea";
+import { Checkbox } from "./ui/checkbox";
 
 export enum FormFieldType {
   INPUT = "input",
@@ -119,16 +120,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
             alt="user"
             className="ml-2"
           />
-          <FormControl>
-            <ReactDatePicker
-              showTimeSelect={props.showTimeSelect ?? false}
-              selected={field.value}
-              onChange={(date: Date) => field.onChange(date)}
-              timeInputLabel="Time:"
-              dateFormat={props.dateFormat ?? "MM/dd/yyyy"}
-              wrapperClassName="date-picker"
-            />
-          </FormControl>
+         
         </div>
       );
     case FormFieldType.SELECT:

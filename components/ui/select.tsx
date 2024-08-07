@@ -6,7 +6,7 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-const Select = SelectPrimitive.Root;
+ Select = SelectPrimitive.Root;
 
 const SelectGroup = SelectPrimitive.Group;
 
